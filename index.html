@@ -3,124 +3,222 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Первые заявки через 48 часов</title>
+<title>Easy Ads Asia — первые заявки за 48 часов</title>
+
+<!-- Open Graph / Share -->
+<meta property="og:title" content="Easy Ads Asia — первые заявки за 48 часов" />
+<meta property="og:description" content="Я запускаю рекламу без вашего кабинета и банов. Лиды приходят в таблицу и чат. Мини-запуск €50." />
+<meta property="og:image" content="https://i.imgur.com/rhzlPgv.jpeg" />
+<meta property="og:url" content="https://puziryov.com/use/eaa-asia-landing" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  :root{
+    --sand:#F8F4EF;
+    --card:#FFFFFF;
+    --text:#1E1B16;
+    --muted:#6B6A67;
+    --border:#E9E2D9;
+    --msgr:#0084FF;
+    --msgr-dark:#006BCE;
+    --tg:#229ED9;
+    --tg-dark:#1A86B8;
+    --brand:#FF7A00;
   }
-  body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #222;
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%}
+  body{font-family:Arial, sans-serif;background:var(--sand);color:var(--text)}
+  .container{
+    background:var(--card);max-width:520px;width:92%;
+    padding:18px 18px 24px;border:1px solid var(--border);
+    border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.06);
+    margin:16px auto 0;
   }
-  .container {
-    background: #fff;
-    max-width: 400px;
-    width: 90%;
-    padding: 20px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    text-align: center;
-    margin: 0 auto;
+  img{max-width:100%;display:block;border-radius:12px}
+  .badge{
+    display:inline-block;background:var(--brand);color:#fff;
+    padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;
+    margin:12px 0 8px;
   }
-  img {
-    max-width: 100%;
-    border-radius: 6px;
+  h1{font-size:22px;line-height:1.2;margin:8px 0 6px}
+  .sub{font-size:13px;color:#4C4A47;margin:0 0 14px}
+
+  ul{list-style:none;padding:0;margin:12px 0;text-align:left}
+  li{margin:8px 0;padding-left:22px;position:relative;font-size:14px}
+  li:before{content:"◆";position:absolute;left:0;top:0;color:var(--brand);font-weight:700}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;
+    border:0;width:100%;margin-top:10px;transition:transform .06s ease, filter .15s ease, background .2s ease;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
   }
-  h1 {
-    font-size: 22px;
-    margin: 16px 0 10px 0;
-    font-weight: 700;
+  .btn:active{transform:translateY(1px)}
+  .btn--fb{background:var(--msgr);color:#fff}
+  .btn--fb:hover{background:var(--msgr-dark)}
+  .btn--tg{background:var(--tg);color:#fff}
+  .btn--tg:hover{background:var(--tg-dark)}
+
+  .hint{font-size:12px;color:var(--muted);margin-top:6px;display:flex;align-items:center;gap:6px}
+  .hint:before{content:"↘";font-weight:700;color:var(--brand)}
+
+  .offer{margin-top:12px;border:1px dashed var(--border);border-radius:12px;padding:12px;background:#FFF7F0}
+  .offer .ttl{font-weight:700;font-size:14px}
+  .offer .txt{font-size:12px;color:var(--muted)}
+
+  .case{
+    display:flex;gap:12px;margin-top:16px;padding:12px;border:1px solid var(--border);
+    border-radius:12px;background:#FFFDF9
   }
-  p, ul {
-    font-size: 14px;
-    margin: 8px 0;
-    line-height: 1.4;
+  .case img{width:86px;height:86px;border-radius:10px;object-fit:cover}
+  .case h3{margin:0 0 6px;font-size:15px;line-height:1.2}
+  .case .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+  .case ul{margin:0;padding-left:18px}
+  .case li{font-size:13px;margin:4px 0}
+
+  .box{margin-top:24px;padding:14px 12px;background:#FFF9F4;border-radius:12px;border:1px solid var(--border)}
+
+  .faq{margin-top:20px;border-top:1px solid var(--border);padding-top:14px}
+  .faq details{margin:8px 0}
+  .faq summary{cursor:pointer;font-weight:700}
+  .faq .ans{margin-top:6px;color:#4C4A47;font-size:14px}
+
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:999;background:var(--sand);
+    border-top:1px solid var(--border);box-shadow:0 -4px 16px rgba(0,0,0,.08);padding:10px 10px 6px;
   }
-  ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-  }
-  ul li {
-    margin: 8px 0;
-    padding-left: 20px;
-    position: relative;
-  }
-  ul li:before {
-    content: "♦";
-    position: absolute;
-    left: 0;
-    color: #0a74da;
-    font-weight: bold;
-  }
-  .button {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #0a74da;
-    color: white;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .note {
-    font-size: 12px;
-    color: #555;
-    margin-top: 12px;
-  }
+  .sticky .wrap{max-width:640px;margin:0 auto}
+  .sticky .cta-row{display:flex;gap:10px}
+  .sticky .note-small{margin-top:6px;font-size:13px;text-align:center;color:var(--muted)}
+  .page-spacer{height:86px}
 </style>
 </head>
 <body>
+
 <div class="container">
-  <img src="https://i.imgur.com/SlnHcSb.jpeg" alt="Первые заявки через 48 часов" />
-  <h1>💬 Хочешь заявки без головняка?<br />🚀 Я покажу, как запустить рекламу за 48 часов — даже без сайта</h1>
+  <!-- HERO -->
+  <img src="https://i.imgur.com/rhzlPgv.jpeg" alt="Easy Ads Asia — заявки за 48 часов"/>
+  <span class="badge">EASY ADS ASIA · запуск за 48 часов</span>
+
+  <h1>Я запускаю рекламу за 48 часов. Заявки — без кабинетов и банов.</h1>
+  <p class="sub">Для аренды, услуг и фриланса · 250+ специалистов уже тестировали мою систему.</p>
+
   <ul>
-    <li>запускаю рекламу через свой кабинет — всё официально</li>
-    <li>работает для аренды, услуг, консультаций и фриланса</li>
-    <li>заявки приходят сразу в таблицу — легко обрабатывать</li>
-    <li>общение с клиентами — в любом формате: как тебе удобно</li>
+    <li>Запускаю всё из <strong>своего</strong> рекламного кабинета — официально и без головняка.</li>
+    <li>Лиды сразу падают в таблицу и в чат — удобно отвечать без лишней бюрократии.</li>
+    <li>Я лично подключаюсь: подскажу оффер, бюджет и жму «Старт».</li>
   </ul>
-  <p>💬 Не обещаю чудес — просто честная система, которую я сам контролирую.</p>
-  <p><strong>🤖 Что будет в Telegram:</strong><br />— бот задаст пару вопросов о твоём бизнесе<br />— подскажет примерную стоимость и как всё устроено<br />✔️ я читаю всё сам и подключаюсь лично, если нужно — чтобы запустить правильно</p>
-  <p class="note">📍 Перейди в Telegram — там всё: цены, запуск, поддержка</p>
-  <a href="#" onclick="trackAndGoToEAA()" class="button">🔵 Узнать подробности → в Telegram</a>
+
+  <!-- Верхний CTA -->
+  <a href="https://puziryov.com/use/eaa-fb/" class="btn btn--fb" onclick="onFBClick(event)">⚡ Начать в Messenger</a>
+  <div class="hint">Жми на Messenger — обсудим детали прямо в чате. Если удобнее, Telegram-кнопка внизу страницы.</div>
+
+  <!-- Мини-оффер -->
+  <div class="offer">
+    <div class="ttl">Мини-запуск — €50</div>
+    <div class="txt">В течение 7 дней можно перейти на старший пакет — без переплаты.</div>
+  </div>
+
+  <!-- КЕЙС 1: Таиланд, школа / виза -->
+  <div class="case">
+    <img src="https://i.imgur.com/qzGQl0R.jpeg" alt="Кейс — школа тайского языка и студенческая виза" />
+    <div>
+      <h3>Кейс: обучение тайскому языку и студенческая виза (Таиланд)</h3>
+      <div class="meta">Ниша: языковая школа · Гео: Таиланд · Канал: Easy Ads Asia</div>
+      <ul>
+        <li>«Я всё подключил, лиды прилетают, всем отвечаем.»</li>
+        <li>«Мальчик на менеджере — прям онлайн висит.»</li>
+        <li>Заявки идут стабильно, обработка — сразу в Messenger.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- КЕЙС 2: Нячанг, аренда / трансферы -->
+  <div class="case">
+    <img src="https://i.imgur.com/XBM6o3I.jpeg" alt="Кейс — аренда байков и трансферы, Нячанг" />
+    <div>
+      <h3>Кейс: аренда байков и трансферы, Нячанг</h3>
+      <div class="meta">Ниша: транспорт и аренда · Гео: Вьетнам, Нячанг · Бюджет: €5/день</div>
+      <ul>
+        <li>Через 3 дня теста пошли первые запросы — люди пишут сразу в Messenger.</li>
+        <li>Запуск делал я: без сайта, без Instagram — всё через мой кабинет.</li>
+        <li>Заявка ≈ €1.20, лиды лежат в таблице и в чате — удобно закрывать.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Локализация / Оплата -->
+  <div class="box">
+    <p style="margin:0 0 6px;font-weight:700;">🌏 Я работаю по всей Юго-Восточной Азии — во Вьетнаме, Таиланде, Камбодже, Лаосе, на Филиппинах и в Индонезии.</p>
+    <p style="margin:0;font-size:14px;line-height:1.45;color:#4C4A47;">
+      Понимаю местный рынок, язык и специфику платежей — реклама адаптирована под реальности ЮВА.<br/>
+💳 Оплата — через <strong>Stripe </strong>(ссылка внутри бота): банковской картой или <strong>PayPal</strong>.
+При желании — <strong>USDT</strong> по договорённости.
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <details>
+      <summary>Если у меня нет сайта и Instagram — это проблема?</summary>
+      <div class="ans">Не проблема. Я запускаю всё из <strong>своего</strong> рекламного кабинета. Заявки падают в таблицу и чат — без вашего сайта и кабинетов.</div>
+    </details>
+    <details>
+      <summary>Сколько стоит старт и когда будут первые заявки?</summary>
+      <div class="ans">Мини-запуск — €50. Обычно первые запросы прилетают в течение 2–5 дней. Если понравится, можно перейти на старший пакет — без переплаты.</div>
+    </details>
+    <details>
+      <summary>Как я оплачиваю?</summary>
+      <div class="ans">Оплата проходит через <strong>Stripe</strong> по ссылке внутри бота — 
+    можно оплатить <strong>банковской картой</strong> или через <strong>PayPal</strong>.<br/>
+    При желании — <strong>USDT</strong> по договорённости.</div>
+    </details>
+    <details>
+      <summary>Это безопасно — запуск без моего кабинета?</summary>
+      <div class="ans">Да. Я запускаю официально от своего кабинета. Вы не рискуете своим аккаунтом и картой, а заявки и результаты видите у себя.</div>
+    </details>
+  </div>
 </div>
 
-<!-- Facebook Pixel Code -->
+<div class="page-spacer" aria-hidden="true"></div>
+
+<!-- Sticky CTA -->
+<div class="sticky" role="region" aria-label="Панель быстрых действий">
+  <div class="wrap">
+    <div class="cta-row">
+      <a href="https://puziryov.com/use/eaa-fb/" class="btn btn--fb" onclick="onFBClick(event)">💬 Messenger</a>
+      <a href="https://puziryov.com/use/eaa-tg/" class="btn btn--tg" onclick="onTGClick(event)">✈️ Telegram</a>
+    </div>
+    <div class="note-small">👋 Жмите Messenger или Telegram — отвечу в чате и запущу рекламу без лишних заморочек.</div>
+  </div>
+</div>
+
+<!-- Facebook Pixel -->
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+  s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '3153750001397422');
   fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"/></noscript>
-<!-- End Facebook Pixel Code -->
 
 <script>
-  function trackAndGoToEAA() {
-    fbq('trackCustom', 'Click_TG_BOT_EAA');
-    fbq('trackCustom', 'Subscribe');
-    setTimeout(function() {
-      window.open('https://puziryov.com/use/eaa-asia/', '_blank');
-    }, 300);
+  function onTGClick(e){
+    fbq('trackCustom','Click_TG_BOT_EAA');
+    fbq('trackCustom','Subscribe');
   }
-
-  window.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function () {
-      fbq('trackCustom', 'ViewContent_eaa_7s');
-    }, 7000);
+  function onFBClick(e){
+    fbq('trackCustom','Click_FB_BOT_EAA');
+    fbq('trackCustom','Subscribe');
+  }
+  window.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){ fbq('trackCustom','ViewContent_eaa_7s'); }, 7000);
   });
 </script>
 </body>
